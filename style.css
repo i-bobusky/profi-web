@@ -1,3 +1,73 @@
+/* ─── TOP ANNOUNCEMENT BAR ──────────────────────────────── */
+.topbar {
+  background: var(--gold);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 24px;
+  font-size: .82rem;
+  font-weight: 600;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 101;
+}
+.topbar__text {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.topbar__cta {
+  background: var(--dark);
+  color: var(--white);
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+.topbar__cta:hover { background: var(--dark-mid); }
+
+/* ─── FLOATING FREE CALL BUTTON ─────────────────────────── */
+.float-cta {
+  position: fixed;
+  bottom: 32px;
+  right: 28px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--gold);
+  color: var(--dark);
+  font-size: .88rem;
+  font-weight: 700;
+  padding: 13px 22px;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(200,169,110,.5);
+  transition: all var(--transition);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+.float-cta.visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.float-cta:hover {
+  background: var(--gold-light);
+  box-shadow: 0 12px 40px rgba(200,169,110,.6);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .float-cta { bottom: 20px; right: 16px; padding: 11px 18px; font-size: .82rem; }
+  .topbar { font-size: .75rem; gap: 10px; }
+}
+
 /* ─── RESET & BASE ─────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

@@ -1,5 +1,9 @@
 const nav = document.getElementById('nav');
-const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+const floatCta = document.getElementById('floatCta');
+const onScroll = () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+  floatCta.classList.toggle('visible', window.scrollY > 300);
+};
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
