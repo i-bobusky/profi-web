@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Igor Bobusky — Premium Web Design & Development</title>
+  <meta name="description" content="Igor Bobusky crafts premium, conversion-focused websites for businesses. Clean design. Real results. Free consultation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">IB<span class="dot">.</span></a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact" class="nav__cta">Free Consultation</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#about" class="nav__mobile-link">About</a>
+      <a href="#services" class="nav__mobile-link">Services</a>
+      <a href="#work" class="nav__mobile-link">Work</a>
+      <a href="#process" class="nav__mobile-link">Process</a>
+      <a href="#contact" class="nav__mobile-link nav__mobile-cta">Free Consultation</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+    </div>
+    <div class="hero__inner container">
+      <div class="hero__eyebrow reveal">Web Design &amp; Development</div>
+      <h1 class="hero__title reveal">
+        Your business deserves<br />
+        <em>a website that works.</em>
+      </h1>
+      <p class="hero__sub reveal">
+        I'm Igor Bobusky — I build premium, high-converting websites<br class="br-desk" />
+        for businesses that want to stand out and grow online.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#contact" class="btn btn--gold">Get a Free Consultation</a>
+        <a href="#work" class="btn btn--ghost">See My Work</a>
+      </div>
+      <div class="hero__trust reveal">
+        <span class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Premium Design</span>
+        <span class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Mobile-First</span>
+        <span class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Fast &amp; SEO-Ready</span>
+        <span class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Free Consultation</span>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about section" id="about">
+    <div class="container about__inner">
+      <div class="about__image-col reveal">
+        <div class="about__image-wrap">
+          <div class="about__image-placeholder">
+            <span class="about__initials">IB</span>
+          </div>
+          <div class="about__badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>5+ years experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="about__text-col">
+        <div class="section-eyebrow reveal">About Me</div>
+        <h2 class="section-title reveal">Hi, I'm Igor Bobusky</h2>
+        <p class="about__lead reveal">
+          I'm a full-stack web designer &amp; developer with a passion for crafting
+          digital experiences that combine stunning aesthetics with real business results.
+        </p>
+        <p class="about__body reveal">
+          Over the past 5+ years I've helped entrepreneurs, startups, and established
+          companies launch websites that not only look exceptional — they convert visitors
+          into customers. From sleek service sites to complex web applications, I bring
+          a premium eye for detail to every project.
+        </p>
+        <div class="about__skills reveal">
+          <span class="skill-tag">UI/UX Design</span>
+          <span class="skill-tag">React / Next.js</span>
+          <span class="skill-tag">WordPress</span>
+          <span class="skill-tag">Webflow</span>
+          <span class="skill-tag">SEO Optimization</span>
+          <span class="skill-tag">E-Commerce</span>
+          <span class="skill-tag">Copywriting</span>
+          <span class="skill-tag">Web Performance</span>
+        </div>
+        <a href="https://linkedin.com/in/i-bobusky" target="_blank" rel="noopener" class="about__linkedin reveal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          View LinkedIn Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section class="services section section--dark" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow section-eyebrow--light">What I Offer</div>
+        <h2 class="section-title section-title--light">Services built for<br /><em>business growth</em></h2>
+        <p class="section-sub section-sub--light">From concept to launch — I handle everything so you can focus on your business.</p>
+      </div>
+      <div class="services__grid">
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </div>
+          <h3>Business Website</h3>
+          <p>A polished, professional website that establishes credibility, showcases your services, and turns visitors into leads.</p>
+          <ul class="service-card__list">
+            <li>Custom Design</li>
+            <li>Mobile Responsive</li>
+            <li>Contact Forms</li>
+            <li>SEO Foundation</li>
+          </ul>
+        </div>
+
+        <div class="service-card service-card--featured reveal">
+          <div class="service-card__badge">Most Popular</div>
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h3>Premium Brand Website</h3>
+          <p>A conversion-optimised, visually striking website that positions your brand at the top of your market.</p>
+          <ul class="service-card__list">
+            <li>Strategic Copywriting</li>
+            <li>Animations &amp; Interactions</li>
+            <li>Speed Optimisation</li>
+            <li>Analytics Setup</li>
+            <li>1-Month Support</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          </div>
+          <h3>E-Commerce Store</h3>
+          <p>A fully-featured online store designed to maximise sales, with a seamless checkout experience your customers will love.</p>
+          <ul class="service-card__list">
+            <li>Product Catalogue</li>
+            <li>Secure Payments</li>
+            <li>Inventory Management</li>
+            <li>Order Tracking</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          </div>
+          <h3>Redesign &amp; Refresh</h3>
+          <p>Breathe new life into an outdated website. I'll modernise the look, improve performance, and sharpen your message.</p>
+          <ul class="service-card__list">
+            <li>Design Audit</li>
+            <li>UX Improvements</li>
+            <li>Content Refresh</li>
+            <li>Performance Boost</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h3>SEO &amp; Performance</h3>
+          <p>Make your website rank higher, load faster, and attract the right audience with targeted optimisation.</p>
+          <ul class="service-card__list">
+            <li>Technical SEO</li>
+            <li>Core Web Vitals</li>
+            <li>Keyword Strategy</li>
+            <li>Monthly Reports</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+          </div>
+          <h3>Maintenance &amp; Support</h3>
+          <p>Keep your website secure, updated, and running smoothly with a dedicated support plan.</p>
+          <ul class="service-card__list">
+            <li>Security Updates</li>
+            <li>Content Changes</li>
+            <li>Uptime Monitoring</li>
+            <li>Priority Support</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WORK / PORTFOLIO ── -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Portfolio</div>
+        <h2 class="section-title">Work that speaks<br /><em>for itself</em></h2>
+        <p class="section-sub">A selection of premium websites crafted for real businesses.</p>
+      </div>
+      <div class="work__grid">
+
+        <article class="work-card reveal">
+          <div class="work-card__preview work-card__preview--glanz">
+            <div class="work-card__overlay">
+              <a href="https://atelier-glanz.ch" target="_blank" rel="noopener" class="work-card__visit">
+                Visit Site
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+            <div class="work-card__mockup">
+              <div class="mockup-bar"><span></span><span></span><span></span></div>
+              <div class="mockup-content">
+                <div class="mockup-hero" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+                  <div class="mockup-logo">ATELIER GLANZ</div>
+                  <div class="mockup-tagline">Premium Cleaning Services</div>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-line"></div>
+                  <div class="mockup-line mockup-line--short"></div>
+                  <div class="mockup-cards">
+                    <div class="mockup-card-sm"></div>
+                    <div class="mockup-card-sm"></div>
+                    <div class="mockup-card-sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <div class="work-card__tags">
+              <span>Business Website</span>
+              <span>Swiss Market</span>
+              <span>Service Industry</span>
+            </div>
+            <h3>Atelier Glanz</h3>
+            <p>Premium cleaning services brand. A clean, elegant presence that positions the company as the go-to provider in Switzerland.</p>
+            <a href="https://atelier-glanz.ch" target="_blank" rel="noopener" class="work-card__link">
+              atelier-glanz.ch
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card__preview work-card__preview--legendary">
+            <div class="work-card__overlay">
+              <a href="https://legendarylovebreakthrough.com/" target="_blank" rel="noopener" class="work-card__visit">
+                Visit Site
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+            <div class="work-card__mockup">
+              <div class="mockup-bar"><span></span><span></span><span></span></div>
+              <div class="mockup-content">
+                <div class="mockup-hero" style="background: linear-gradient(135deg, #2d1b69 0%, #8b2fc9 100%);">
+                  <div class="mockup-logo" style="color: #ffd700;">LEGENDARY LOVE</div>
+                  <div class="mockup-tagline">Breakthrough Coaching</div>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-line"></div>
+                  <div class="mockup-line mockup-line--short"></div>
+                  <div class="mockup-cards">
+                    <div class="mockup-card-sm" style="background: #f3e8ff;"></div>
+                    <div class="mockup-card-sm" style="background: #f3e8ff;"></div>
+                    <div class="mockup-card-sm" style="background: #f3e8ff;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card__info">
+            <div class="work-card__tags">
+              <span>Coaching Brand</span>
+              <span>Landing Page</span>
+              <span>Conversion-Focused</span>
+            </div>
+            <h3>Legendary Love Breakthrough</h3>
+            <p>High-conversion coaching website designed to connect deeply with the audience and drive consultation bookings.</p>
+            <a href="https://legendarylovebreakthrough.com/" target="_blank" rel="noopener" class="work-card__link">
+              legendarylovebreakthrough.com
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="work__more reveal">
+        <p>Want to see more? Let's talk about your project.</p>
+        <a href="#contact" class="btn btn--dark">Start a Conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESS ── -->
+  <section class="process section section--light" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">How It Works</div>
+        <h2 class="section-title">From idea to launch<br /><em>in 4 steps</em></h2>
+        <p class="section-sub">A clear, collaborative process so you always know where your project stands.</p>
+      </div>
+      <div class="process__steps">
+        <div class="process__step reveal">
+          <div class="process__number">01</div>
+          <div class="process__content">
+            <h3>Discovery Call</h3>
+            <p>We talk through your goals, audience, and vision. I ask the right questions to understand exactly what will make your website succeed.</p>
+          </div>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step reveal">
+          <div class="process__number">02</div>
+          <div class="process__content">
+            <h3>Strategy &amp; Design</h3>
+            <p>I create wireframes and a bespoke design concept tailored to your brand. You review, give feedback, and we refine until it's perfect.</p>
+          </div>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step reveal">
+          <div class="process__number">03</div>
+          <div class="process__content">
+            <h3>Development</h3>
+            <p>Your approved design is built with clean, fast, secure code. You get a staging preview to test before anything goes live.</p>
+          </div>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step reveal">
+          <div class="process__number">04</div>
+          <div class="process__content">
+            <h3>Launch &amp; Support</h3>
+            <p>We go live together. I handle the technical side, train you on managing content, and stay available for questions after launch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONSULTATION CTA ── -->
+  <section class="cta-section">
+    <div class="cta-section__bg">
+      <div class="cta-section__glow"></div>
+    </div>
+    <div class="container cta-section__inner reveal">
+      <div class="cta-section__badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Free &amp; No Obligation
+      </div>
+      <h2>Ready to build something<br /><em>exceptional?</em></h2>
+      <p>Book a free 30-minute consultation. I'll listen to your goals, share honest advice, and tell you exactly how I can help — no hard sell.</p>
+      <a href="#contact" class="btn btn--gold btn--lg">Book Your Free Call</a>
+    </div>
+  </section>
+
+  <!-- ── CONTACT FORM ── -->
+  <section class="contact section" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info reveal">
+        <div class="section-eyebrow">Let's Talk</div>
+        <h2 class="section-title">Start your<br /><em>project today</em></h2>
+        <p>Fill in the form and I'll get back to you within 24 hours. First call is always free.</p>
+        <div class="contact__details">
+          <a href="mailto:hello@igorbobusky.com" class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div>
+              <span class="contact__detail-label">Email</span>
+              <span class="contact__detail-value">hello@igorbobusky.com</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/i-bobusky" target="_blank" rel="noopener" class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <span class="contact__detail-label">LinkedIn</span>
+              <span class="contact__detail-value">linkedin.com/in/i-bobusky</span>
+            </div>
+          </a>
+        </div>
+        <div class="contact__promise">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Response within 24 hours — always.
+        </div>
+      </div>
+
+      <form class="contact__form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required />
+            <span class="form-error" id="nameError">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="john@company.com" required />
+            <span class="form-error" id="emailError">Please enter a valid email.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="company">Company / Website (optional)</label>
+          <input type="text" id="company" name="company" placeholder="Your company name or current website" />
+        </div>
+        <div class="form-group">
+          <label for="service">What are you looking for? *</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option value="business-website">Business Website</option>
+            <option value="premium-website">Premium Brand Website</option>
+            <option value="ecommerce">E-Commerce Store</option>
+            <option value="redesign">Redesign &amp; Refresh</option>
+            <option value="seo">SEO &amp; Performance</option>
+            <option value="maintenance">Maintenance &amp; Support</option>
+            <option value="other">Not sure — let's talk</option>
+          </select>
+          <span class="form-error" id="serviceError">Please select a service.</span>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell me about your project *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Describe your business, what you need, your timeline, and any other details…" required></textarea>
+          <span class="form-error" id="messageError">Please tell me a bit about your project.</span>
+        </div>
+        <div class="form-group form-group--check">
+          <label class="check-label">
+            <input type="checkbox" id="consultation" name="consultation" checked />
+            <span class="check-box"></span>
+            I'd like a <strong>free 30-minute consultation call</strong>
+          </label>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full" id="submitBtn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-loading" hidden>Sending…</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+        <div class="form-success" id="formSuccess" hidden>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <strong>Message sent!</strong> I'll be in touch within 24 hours.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">IB<span class="dot">.</span></a>
+        <p>Building premium websites for<br />businesses that mean business.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <a href="#services">Business Website</a>
+          <a href="#services">Premium Brand Site</a>
+          <a href="#services">E-Commerce</a>
+          <a href="#services">Redesign</a>
+          <a href="#services">SEO</a>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <a href="https://linkedin.com/in/i-bobusky" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:hello@igorbobusky.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Igor Bobusky. All rights reserved.</p>
+      <p>Crafted with care — <a href="#contact">let's build yours</a>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
