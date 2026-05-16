@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum — IB Webdesign Schweiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .legal { padding: 140px 0 96px; min-height: 100vh; }
+    .legal__back { display: inline-flex; align-items: center; gap: 6px; font-size: .85rem; font-weight: 600; color: var(--primary); margin-bottom: 40px; transition: opacity var(--transition); }
+    .legal__back:hover { opacity: .7; }
+    .legal h1 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+    .legal__updated { font-size: .82rem; color: var(--muted); margin-bottom: 40px; }
+    .legal h2 { font-size: 1.05rem; font-weight: 700; margin: 32px 0 10px; }
+    .legal p, .legal address { font-size: .93rem; color: var(--muted); line-height: 1.75; font-style: normal; margin-bottom: 10px; }
+    .legal a { color: var(--primary); }
+    .legal a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">IB Webdesign<span class="dot">.</span></a>
+    </div>
+  </nav>
+
+  <main class="legal">
+    <div class="container" style="max-width: 720px;">
+      <a href="index.html" class="legal__back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Zurück zur Startseite
+      </a>
+
+      <h1>Impressum</h1>
+      <p class="legal__updated">Stand: Mai 2026</p>
+
+      <h2>Angaben gemäss Art. 13 DSG (Schweiz)</h2>
+
+      <h2>Verantwortliche Person / Unternehmen</h2>
+      <address>
+        Omnia Business Bobusky<br />
+        Igor Bobusky<br />
+        Zug, Schweiz
+      </address>
+
+      <h2>Kontakt</h2>
+      <p>
+        E-Mail: <a href="mailto:hello@igorbobusky.com">hello@igorbobusky.com</a><br />
+        Telefon: <a href="tel:+41767887823">076 788 78 23</a><br />
+        LinkedIn: <a href="https://www.linkedin.com/in/igorbobusky/" target="_blank" rel="noopener">linkedin.com/in/igorbobusky</a><br />
+        Webseite: <a href="https://ib-webdesign.ch">ib-webdesign.ch</a>
+      </p>
+
+      <h2>Haftungsausschluss</h2>
+      <p>
+        Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.
+      </p>
+
+      <h2>Urheberrecht</h2>
+      <p>
+        Die auf dieser Webseite enthaltenen Inhalte und Werke sind urheberrechtlich geschützt. Jede Vervielfältigung, Bearbeitung, Verbreitung oder Verwertung ausserhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung von Omnia Business Bobusky.
+      </p>
+
+      <h2>Datenschutz</h2>
+      <p>
+        Informationen zum Datenschutz finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__bottom" style="max-width: 1160px; margin: 0 auto;">
+      <p>© 2026 IB Webdesign Schweiz — Omnia Business Bobusky. Alle Rechte vorbehalten.</p>
+      <div class="footer__bottom-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
