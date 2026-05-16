@@ -1,20 +1,15 @@
-// ── NAV scroll effect
 const nav = document.getElementById('nav');
 const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// ── Mobile burger menu
 const burger = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobileMenu');
-burger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
+burger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 mobileMenu.querySelectorAll('.nav__mobile-link').forEach(link => {
   link.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-// ── Scroll reveal (Intersection Observer)
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(
   (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
@@ -25,18 +20,15 @@ reveals.forEach((el, i) => {
   observer.observe(el);
 });
 
-// ── Smooth anchor scroll (offset for fixed nav)
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
-    const offset = 80;
-    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
   });
 });
 
-// ── Contact form validation & submit
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 const formSuccess = document.getElementById('formSuccess');
@@ -67,23 +59,13 @@ form.addEventListener('submit', async e => {
   e.preventDefault();
   const allValid = Object.keys(fields).map(validateField).every(Boolean);
   if (!allValid) return;
-
   const btnText = submitBtn.querySelector('.btn-text');
   const btnLoading = submitBtn.querySelector('.btn-loading');
   btnText.hidden = true;
   btnLoading.hidden = false;
   submitBtn.disabled = true;
-
-  // Simulate async submission (replace with real endpoint)
   await new Promise(r => setTimeout(r, 1200));
-
   form.reset();
   formSuccess.hidden = false;
   submitBtn.hidden = true;
-
-  // Encode and build mailto fallback
-  const name = fields.name.el.value;
-  const email = fields.email.el.value;
-  const message = fields.message.el.value;
-  console.info('Form submitted:', { name, email, message });
 });
