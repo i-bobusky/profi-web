@@ -32,7 +32,9 @@ reveals.forEach((el, i) => {
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
+    const href = a.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector(href);
     if (!target) return;
     e.preventDefault();
     const navH = document.querySelector('.nav')?.offsetHeight || 72;
@@ -114,8 +116,9 @@ form.addEventListener('submit', async e => {
     const data = await res.json();
     if (data.success) {
       form.reset();
-      formSuccess.hidden = false;
       submitBtn.hidden = true;
+      formSuccess.hidden = false;
+      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else {
       throw new Error(data.message);
     }
