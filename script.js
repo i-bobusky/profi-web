@@ -67,10 +67,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   setInterval(tick, 1000);
 })();
 
-// Contact form with formsubmit.co
+// Contact form — validates then submits directly to formsubmit.co
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
-const formSuccess = document.getElementById('formSuccess');
 
 const fields = {
   name:    { el: document.getElementById('name'),    validate: v => v.trim().length >= 2 },
@@ -94,34 +93,13 @@ Object.keys(fields).forEach(key => {
   });
 });
 
-form.addEventListener('submit', async e => {
-  e.preventDefault();
+form.addEventListener('submit', e => {
   const allValid = Object.keys(fields).map(validateField).every(Boolean);
-  if (!allValid) return;
-
+  if (!allValid) { e.preventDefault(); return; }
   const btnText    = submitBtn.querySelector('.btn-text');
   const btnLoading = submitBtn.querySelector('.btn-loading');
   btnText.hidden    = true;
   btnLoading.hidden = false;
   submitBtn.disabled = true;
-
-  try {
-    const res = await fetch('https://formsubmit.co/ajax/igor.bobusky@gmail.com', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form),
-    });
-    if (res.ok) {
-      form.reset();
-      formSuccess.hidden = false;
-      submitBtn.hidden = true;
-    } else {
-      throw new Error();
-    }
-  } catch {
-    btnText.hidden    = false;
-    btnLoading.hidden = true;
-    submitBtn.disabled = false;
-    alert('Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an igor.bobusky@gmail.com');
-  }
+  // form submits naturally to formsubmit.co → redirects to danke.html
 });

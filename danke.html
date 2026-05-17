@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danke! — IB Webdesign Schweiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .danke {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 24px 80px;
+      background: var(--light);
+    }
+    .danke__card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 56px 48px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+    }
+    .danke__icon {
+      width: 64px;
+      height: 64px;
+      background: #F0FDF4;
+      border: 2px solid #BBF7D0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      color: #16A34A;
+    }
+    .danke__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+    .danke__title em { font-style: italic; color: var(--accent); }
+    .danke__text {
+      font-size: .95rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .danke__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: 20px;
+      transition: color var(--transition);
+    }
+    .danke__back:hover { color: var(--primary); }
+    @media (max-width: 480px) {
+      .danke__card { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">IB Webdesign<span class="dot">.</span></a>
+    </div>
+  </nav>
+
+  <main class="danke">
+    <div class="danke__card">
+      <div class="danke__icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h1 class="danke__title">Vielen <em>Dank!</em></h1>
+      <p class="danke__text">
+        Ihre Nachricht wurde erfolgreich gesendet.<br />
+        Ich melde mich innerhalb von 24 Stunden bei Ihnen.<br /><br />
+        Ich freue mich darauf, mehr über Ihr Projekt zu erfahren.
+      </p>
+      <a href="index.html" class="btn btn--primary">Zurück zur Startseite</a>
+      <br />
+      <a href="index.html" class="danke__back">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        ib-webdesign.ch
+      </a>
+    </div>
+  </main>
+</body>
+</html>
