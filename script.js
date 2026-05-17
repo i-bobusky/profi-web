@@ -106,7 +106,7 @@ form.addEventListener('submit', async e => {
   submitBtn.disabled = true;
 
   try {
-    const res = await fetch('https://formsubmit.co/ajax/hello@igorbobusky.com', {
+    const res = await fetch('https://formsubmit.co/ajax/igor.bobusky@gmail.com', {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: new FormData(form),
@@ -122,6 +122,6 @@ form.addEventListener('submit', async e => {
     btnText.hidden    = false;
     btnLoading.hidden = true;
     submitBtn.disabled = false;
-    alert('Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an hello@igorbobusky.com');
+    alert('Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an igor.bobusky@gmail.com');
   }
 });
