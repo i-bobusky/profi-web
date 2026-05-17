@@ -67,9 +67,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   setInterval(tick, 1000);
 })();
 
-// Contact form — validates then submits directly to formsubmit.co
+// Contact form — Web3Forms AJAX
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
+const formSuccess = document.getElementById('formSuccess');
 
 const fields = {
   name:    { el: document.getElementById('name'),    validate: v => v.trim().length >= 2 },
@@ -93,13 +94,35 @@ Object.keys(fields).forEach(key => {
   });
 });
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
+  e.preventDefault();
   const allValid = Object.keys(fields).map(validateField).every(Boolean);
-  if (!allValid) { e.preventDefault(); return; }
+  if (!allValid) return;
+
   const btnText    = submitBtn.querySelector('.btn-text');
   const btnLoading = submitBtn.querySelector('.btn-loading');
   btnText.hidden    = true;
   btnLoading.hidden = false;
   submitBtn.disabled = true;
-  // form submits naturally to formsubmit.co → redirects to danke.html
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form),
+    });
+    const data = await res.json();
+    if (data.success) {
+      form.reset();
+      formSuccess.hidden = false;
+      submitBtn.hidden = true;
+    } else {
+      throw new Error(data.message);
+    }
+  } catch {
+    btnText.hidden    = false;
+    btnLoading.hidden = true;
+    submitBtn.disabled = false;
+    alert('Etwas ist schiefgelaufen. Bitte schreiben Sie direkt an igor.bobusky@gmail.com');
+  }
 });
