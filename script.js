@@ -29,7 +29,7 @@ reveals.forEach((el, i) => {
   observer.observe(el);
 });
 
-// Smooth scroll
+// Smooth scroll — guard against href="#" to prevent page-top jump
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const href = a.getAttribute('href');
@@ -41,33 +41,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navH - 8, behavior: 'smooth' });
   });
 });
-
-// Countdown timer — campaign ends June 15, 2026
-(function initCountdown() {
-  const CAMPAIGN_END = new Date('2026-06-15T23:59:59+02:00').getTime();
-  const elDays    = document.getElementById('cd-days');
-  const elHours   = document.getElementById('cd-hours');
-  const elMinutes = document.getElementById('cd-minutes');
-  const elSeconds = document.getElementById('cd-seconds');
-  if (!elDays) return;
-
-  function pad(n) { return String(n).padStart(2, '0'); }
-
-  function tick() {
-    const diff = CAMPAIGN_END - Date.now();
-    if (diff <= 0) {
-      elDays.textContent = elHours.textContent = elMinutes.textContent = elSeconds.textContent = '00';
-      return;
-    }
-    elDays.textContent    = pad(Math.floor(diff / 86400000));
-    elHours.textContent   = pad(Math.floor((diff % 86400000) / 3600000));
-    elMinutes.textContent = pad(Math.floor((diff % 3600000) / 60000));
-    elSeconds.textContent = pad(Math.floor((diff % 60000) / 1000));
-  }
-
-  tick();
-  setInterval(tick, 1000);
-})();
 
 // Contact form — Web3Forms AJAX
 const form = document.getElementById('contactForm');
