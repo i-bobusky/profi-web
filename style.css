@@ -758,6 +758,7 @@ input, textarea, select { font-family: inherit; }
 .footer__bottom-links { display: flex; gap: 20px; }
 .footer__bottom-links a { font-size: .78rem; color: rgba(255,255,255,.3); transition: color var(--transition); }
 .footer__bottom-links a:hover { color: var(--white); }
+.footer__test-link { opacity: .25 !important; font-size: .6rem !important; }
 
 /* ─── FLOATING CTA ─── */
 .float-cta {
