@@ -843,8 +843,10 @@ input, textarea, select { font-family: inherit; }
   .care__header { flex-direction: column; gap: 6px; }
   .care__price { text-align: left; }
   .warum__item { gap: 14px; }
+  .warum__text { text-align: center; }
   .included__item { padding: 14px; }
   .pakete__grid { max-width: 100%; }
+  .vorschlag__cta { text-align: center; }
   .cta-section__actions { align-items: stretch; }
   .cta-section__actions .btn { width: 100%; justify-content: center; }
   .container { padding: 0 16px; }
