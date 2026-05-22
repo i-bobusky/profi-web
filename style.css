@@ -588,6 +588,7 @@ input, textarea, select { font-family: inherit; }
 
 /* ─── PORTFOLIO ─── */
 .work__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.work__more { text-align: center; margin-top: 32px; color: var(--muted); font-size: .92rem; font-style: italic; }
 .work-card {
   background: var(--bg);
   border-radius: var(--radius);
