@@ -145,6 +145,6 @@ form.addEventListener('submit', async e => {
     btnText.hidden    = false;
     btnLoading.hidden = true;
     submitBtn.disabled = false;
-    alert('Etwas ist schiefgelaufen. Bitte schreiben Sie direkt an igor.bobusky@gmail.com');
+    alert('Etwas ist schiefgelaufen. Bitte schreiben Sie direkt an info@ib-webdesign.ch');
   }
 });
