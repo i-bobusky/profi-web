@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ib-webdesign.ch/sitemap.xml

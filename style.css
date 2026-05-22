@@ -156,6 +156,35 @@ input, textarea, select { font-family: inherit; }
 .nav.scrolled .nav__cta { background: var(--white) !important; color: var(--primary) !important; }
 .nav.scrolled .nav__cta:hover { background: var(--primary-lt) !important; }
 .nav.scrolled .nav__burger span { background: var(--white); }
+
+/* Language toggle */
+.nav__lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-right: 8px;
+}
+.nav__lang-toggle > span { font-size: .7rem; opacity: .3; color: var(--text); }
+.nav.scrolled .nav__lang-toggle > span { color: var(--white); }
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--text);
+  opacity: .35;
+  transition: opacity var(--transition), background var(--transition), color var(--transition);
+  border-radius: 4px;
+  line-height: 1;
+}
+.lang-btn.active { opacity: 1; background: var(--primary); color: var(--white); padding: 3px 7px; }
+.lang-btn:hover:not(.active) { opacity: .75; }
+.nav.scrolled .lang-btn { color: var(--white); }
+.nav.scrolled .lang-btn.active { background: var(--white); color: var(--primary); }
 .nav__inner {
   display: flex;
   align-items: center;

@@ -5,6 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IB Webdesign Schweiz — Professionelle Webseiten ab CHF 499</title>
   <meta name="description" content="Professionelle Webseiten für Selbständige, Vereine und KMU in der Schweiz. Klar, schnell und bezahlbar. Kostenlosen Website-Vorschlag erhalten." />
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://ib-webdesign.ch/" />
+  <link rel="alternate" hreflang="de" href="https://ib-webdesign.ch/" />
+  <link rel="alternate" hreflang="en" href="https://ib-webdesign.ch/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ib-webdesign.ch/" />
+  <meta property="og:title" content="IB Webdesign Schweiz — Professionelle Webseiten ab CHF 499" />
+  <meta property="og:description" content="Professionelle Webseiten für Selbständige, Vereine und KMU in der Schweiz. Klar, schnell und bezahlbar." />
+  <meta property="og:image" content="https://ib-webdesign.ch/images/og-image.jpg" />
+  <meta property="og:locale" content="de_CH" />
+  <meta property="og:locale:alternate" content="en_GB" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IB Webdesign Schweiz — Professionelle Webseiten ab CHF 499" />
+  <meta name="twitter:description" content="Professionelle Webseiten für Selbständige, Vereine und KMU in der Schweiz." />
+  <meta name="twitter:image" content="https://ib-webdesign.ch/images/og-image.jpg" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IB Webdesign",
+    "alternateName": "Omnia Business Bobusky",
+    "description": "Professionelle Webseiten für Selbständige, Vereine und KMU in der Schweiz",
+    "url": "https://ib-webdesign.ch",
+    "email": "igor.bobusky@gmail.com",
+    "telephone": "+41767887823",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Zug",
+      "addressCountry": "CH"
+    },
+    "priceRange": "CHF 499 – CHF 799",
+    "areaServed": "CH",
+    "sameAs": ["https://www.linkedin.com/in/igorbobusky/"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
@@ -14,8 +57,8 @@
 
   <!-- TOPBAR -->
   <div class="topbar">
-    <span class="topbar__text topbar__full">Aktuelles Spezialangebot für eine begrenzte Anzahl an Projekten — Basic Website ab CHF 499</span>
-    <span class="topbar__text topbar__short">Spezialangebot — Basic Website ab CHF 499</span>
+    <span class="topbar__text topbar__full" data-i18n="topbar.full">Aktuelles Spezialangebot für eine begrenzte Anzahl an Projekten — Basic Website ab CHF 499</span>
+    <span class="topbar__text topbar__short" data-i18n="topbar.short">Spezialangebot — Basic Website ab CHF 499</span>
   </div>
 
   <!-- NAV -->
@@ -23,22 +66,27 @@
     <div class="nav__inner">
       <a href="#" class="nav__logo">IB Webdesign<span class="dot">.</span></a>
       <ul class="nav__links">
-        <li><a href="#warum">Warum</a></li>
-        <li><a href="#pakete">Pakete</a></li>
-        <li><a href="#erfahrung">Erfahrung</a></li>
-        <li><a href="#work">Referenzen</a></li>
-        <li><a href="#kontakt" class="nav__cta">Unverbindlich anfragen</a></li>
+        <li><a href="#warum" data-i18n="nav.why">Warum</a></li>
+        <li><a href="#pakete" data-i18n="nav.packages">Pakete</a></li>
+        <li><a href="#erfahrung" data-i18n="nav.experience">Erfahrung</a></li>
+        <li><a href="#work" data-i18n="nav.references">Referenzen</a></li>
+        <li><a href="#kontakt" class="nav__cta" data-i18n="nav.cta">Unverbindlich anfragen</a></li>
       </ul>
-      <button class="nav__burger" id="burger" aria-label="Menü">
+      <div class="nav__lang-toggle" id="langToggle" aria-label="Switch language">
+        <button class="lang-btn active" data-lang="de">DE</button>
+        <span aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menü" data-i18n-aria="nav.menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav__mobile" id="mobileMenu">
-      <a href="#warum" class="nav__mobile-link">Warum</a>
-      <a href="#pakete" class="nav__mobile-link">Pakete</a>
-      <a href="#erfahrung" class="nav__mobile-link">Erfahrung</a>
-      <a href="#work" class="nav__mobile-link">Referenzen</a>
-      <a href="#kontakt" class="nav__mobile-link nav__mobile-cta">Unverbindlich anfragen</a>
+      <a href="#warum" class="nav__mobile-link" data-i18n="nav.why">Warum</a>
+      <a href="#pakete" class="nav__mobile-link" data-i18n="nav.packages">Pakete</a>
+      <a href="#erfahrung" class="nav__mobile-link" data-i18n="nav.experience">Erfahrung</a>
+      <a href="#work" class="nav__mobile-link" data-i18n="nav.references">Referenzen</a>
+      <a href="#kontakt" class="nav__mobile-link nav__mobile-cta" data-i18n="nav.cta">Unverbindlich anfragen</a>
     </div>
   </nav>
 
@@ -46,25 +94,25 @@
   <section class="hero" id="home">
     <div class="hero__inner container">
       <div class="hero__text reveal">
-        <div class="hero__eyebrow">IB Webdesign Schweiz · ib-webdesign.ch</div>
-        <h1 class="hero__title">
+        <div class="hero__eyebrow" data-i18n="hero.eyebrow">IB Webdesign Schweiz · ib-webdesign.ch</div>
+        <h1 class="hero__title" data-i18n-html="hero.title">
           Professionelle Webseiten.<br />
           <em>Klar. Schnell. Bezahlbar.</em>
         </h1>
-        <p class="hero__sub">
+        <p class="hero__sub" data-i18n="hero.sub">
           Ich helfe Selbständigen, Vereinen und KMU in der Schweiz, ihr Angebot klar und professionell online zu präsentieren — damit Menschen verstehen, was Sie anbieten, Vertrauen aufbauen und einfacher Kontakt aufnehmen.
         </p>
-        <p class="hero__support">
+        <p class="hero__support" data-i18n="hero.support">
           Sie wissen noch nicht genau, wie Ihre Webseite aussehen soll? Kein Problem. Schreiben Sie mir unverbindlich — gemeinsam finden wir eine passende Lösung.
         </p>
         <div class="hero__prices">
-          <span>Basic Website ab <strong>CHF 499</strong></span>
+          <span data-i18n-html="hero.price.basic">Basic Website ab <strong>CHF 499</strong></span>
           <span class="hero__prices-sep">·</span>
-          <span>Komplexe Website ab <strong>CHF 799</strong></span>
+          <span data-i18n-html="hero.price.komplex">Komplexe Website ab <strong>CHF 799</strong></span>
         </div>
         <div class="hero__actions">
-          <a href="#vorschlag" class="btn btn--primary btn--lg">Kostenlosen Website-Vorschlag erhalten</a>
-          <a href="#kontakt" class="btn btn--outline">Unverbindlich anfragen</a>
+          <a href="#vorschlag" class="btn btn--primary btn--lg" data-i18n="hero.btn.proposal">Kostenlosen Website-Vorschlag erhalten</a>
+          <a href="#kontakt" class="btn btn--outline" data-i18n="hero.btn.contact">Unverbindlich anfragen</a>
         </div>
       </div>
       <div class="hero__visual reveal">
@@ -73,7 +121,7 @@
         </div>
         <div class="hero__badge">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span>Kundenzufriedenheit steht bei mir an erster Stelle</span>
+          <span data-i18n="hero.badge">Kundenzufriedenheit steht bei mir an erster Stelle</span>
         </div>
       </div>
     </div>
@@ -84,15 +132,15 @@
     <div class="container">
       <div class="vorschlag__inner reveal">
         <div class="vorschlag__text">
-          <div class="section-eyebrow section-eyebrow--light">Kostenlos &amp; unverbindlich</div>
-          <h2>Kostenloser<br />Website-Vorschlag</h2>
-          <p>Sie sind unsicher, was Ihre Webseite braucht?</p>
-          <p>Schreiben Sie mir kurz, was Sie anbieten und wen Sie erreichen möchten. Ich helfe Ihnen, Ihr Angebot zu strukturieren und erstelle Ihnen einen ersten unverbindlichen Vorschlag für Ihre Webseite.</p>
-          <p class="vorschlag__note">So sehen Sie schnell, wie Ihr professioneller Online-Auftritt aussehen könnte — ohne Risiko und ohne Verpflichtung.</p>
+          <div class="section-eyebrow section-eyebrow--light" data-i18n-html="vorschlag.eyebrow">Kostenlos &amp; unverbindlich</div>
+          <h2 data-i18n-html="vorschlag.title">Kostenloser<br />Website-Vorschlag</h2>
+          <p data-i18n="vorschlag.p1">Sie sind unsicher, was Ihre Webseite braucht?</p>
+          <p data-i18n="vorschlag.p2">Schreiben Sie mir kurz, was Sie anbieten und wen Sie erreichen möchten. Ich helfe Ihnen, Ihr Angebot zu strukturieren und erstelle Ihnen einen ersten unverbindlichen Vorschlag für Ihre Webseite.</p>
+          <p class="vorschlag__note" data-i18n="vorschlag.note">So sehen Sie schnell, wie Ihr professioneller Online-Auftritt aussehen könnte — ohne Risiko und ohne Verpflichtung.</p>
         </div>
         <div class="vorschlag__cta">
-          <a href="#kontakt" class="btn btn--white btn--lg">Website-Vorschlag anfragen</a>
-          <p class="vorschlag__cta-note">Kein Verkaufsdruck. Kein Risiko. Einfach eine ehrliche Einschätzung.</p>
+          <a href="#kontakt" class="btn btn--white btn--lg" data-i18n="vorschlag.btn">Website-Vorschlag anfragen</a>
+          <p class="vorschlag__cta-note" data-i18n="vorschlag.cta-note">Kein Verkaufsdruck. Kein Risiko. Einfach eine ehrliche Einschätzung.</p>
         </div>
       </div>
     </div>
@@ -103,46 +151,46 @@
     <div class="container">
       <div class="warum__inner">
         <div class="warum__text reveal">
-          <div class="section-eyebrow">Warum eine professionelle Webseite?</div>
-          <h2 class="section-title">Ihre Webseite ist oft<br /><em>der erste Eindruck</em></h2>
-          <p class="warum__lead">Wenn Menschen nach Ihnen suchen, entscheidet Ihre Webseite oft in wenigen Sekunden, ob Vertrauen entsteht — und ob jemand Kontakt aufnimmt oder weiterschaut.</p>
-          <p class="warum__body">Eine gute Webseite ist keine Frage des Budgets. Sie ist eine Frage der Klarheit, der Struktur und der richtigen Darstellung Ihres Angebots.</p>
-          <a href="#kontakt" class="btn btn--primary">Unverbindlich anfragen</a>
+          <div class="section-eyebrow" data-i18n="warum.eyebrow">Warum eine professionelle Webseite?</div>
+          <h2 class="section-title" data-i18n-html="warum.title">Ihre Webseite ist oft<br /><em>der erste Eindruck</em></h2>
+          <p class="warum__lead" data-i18n="warum.lead">Wenn Menschen nach Ihnen suchen, entscheidet Ihre Webseite oft in wenigen Sekunden, ob Vertrauen entsteht — und ob jemand Kontakt aufnimmt oder weiterschaut.</p>
+          <p class="warum__body" data-i18n="warum.body">Eine gute Webseite ist keine Frage des Budgets. Sie ist eine Frage der Klarheit, der Struktur und der richtigen Darstellung Ihres Angebots.</p>
+          <a href="#kontakt" class="btn btn--primary" data-i18n="warum.btn">Unverbindlich anfragen</a>
         </div>
         <div class="warum__list reveal">
           <div class="warum__item">
             <div class="warum__num">01</div>
             <div>
-              <strong>Ihr Angebot klar erklären</strong>
-              <p>Kunden verstehen sofort, was Sie tun und warum Sie die richtige Wahl sind.</p>
+              <strong data-i18n="warum.01.title">Ihr Angebot klar erklären</strong>
+              <p data-i18n="warum.01.text">Kunden verstehen sofort, was Sie tun und warum Sie die richtige Wahl sind.</p>
             </div>
           </div>
           <div class="warum__item">
             <div class="warum__num">02</div>
             <div>
-              <strong>Professioneller wahrgenommen werden</strong>
-              <p>Eine gepflegte Webseite schafft Vertrauen — bevor Sie auch nur ein Wort gesprochen haben.</p>
+              <strong data-i18n="warum.02.title">Professioneller wahrgenommen werden</strong>
+              <p data-i18n="warum.02.text">Eine gepflegte Webseite schafft Vertrauen — bevor Sie auch nur ein Wort gesprochen haben.</p>
             </div>
           </div>
           <div class="warum__item">
             <div class="warum__num">03</div>
             <div>
-              <strong>Einfacher Anfragen erhalten</strong>
-              <p>Ein klares Kontaktformular oder eine Telefonnummer macht die Kontaktaufnahme einfach.</p>
+              <strong data-i18n="warum.03.title">Einfacher Anfragen erhalten</strong>
+              <p data-i18n="warum.03.text">Ein klares Kontaktformular oder eine Telefonnummer macht die Kontaktaufnahme einfach.</p>
             </div>
           </div>
           <div class="warum__item">
             <div class="warum__num">04</div>
             <div>
-              <strong>Ihre Zielgruppe besser ansprechen</strong>
-              <p>Ich helfe Ihnen, Ihre Botschaft so zu formulieren, dass die richtigen Menschen angesprochen werden.</p>
+              <strong data-i18n="warum.04.title">Ihre Zielgruppe besser ansprechen</strong>
+              <p data-i18n="warum.04.text">Ich helfe Ihnen, Ihre Botschaft so zu formulieren, dass die richtigen Menschen angesprochen werden.</p>
             </div>
           </div>
           <div class="warum__item">
             <div class="warum__num">05</div>
             <div>
-              <strong>Ihre Idee oder Ihr Business sichtbar machen</strong>
-              <p>Ob Neustart oder Modernisierung — Ihre Webseite arbeitet rund um die Uhr für Sie.</p>
+              <strong data-i18n="warum.05.title">Ihre Idee oder Ihr Business sichtbar machen</strong>
+              <p data-i18n="warum.05.text">Ob Neustart oder Modernisierung — Ihre Webseite arbeitet rund um die Uhr für Sie.</p>
             </div>
           </div>
         </div>
@@ -154,70 +202,70 @@
   <section class="pakete section section--light" id="pakete">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-eyebrow">Pakete &amp; Preise</div>
-        <h2 class="section-title">Klare Preise.<br /><em>Keine Überraschungen.</em></h2>
-        <p class="section-sub">Alle Pakete beinhalten Domain-Setup, E-Mail-Einrichtung, technischen Launch-Support und bis zu 5 Änderungsrunden.</p>
+        <div class="section-eyebrow" data-i18n-html="pakete.eyebrow">Pakete &amp; Preise</div>
+        <h2 class="section-title" data-i18n-html="pakete.title">Klare Preise.<br /><em>Keine Überraschungen.</em></h2>
+        <p class="section-sub" data-i18n="pakete.sub">Alle Pakete beinhalten Domain-Setup, E-Mail-Einrichtung, technischen Launch-Support und bis zu 5 Änderungsrunden.</p>
       </div>
       <div class="pakete__grid">
 
         <div class="paket-card reveal">
           <div class="paket-card__top">
-            <div class="paket-card__name">Basic Website</div>
+            <div class="paket-card__name" data-i18n="pakete.basic.name">Basic Website</div>
             <div class="paket-card__price"><span>CHF</span> 499</div>
-            <p class="paket-card__tagline">Für einen klaren, professionellen Start.</p>
+            <p class="paket-card__tagline" data-i18n="pakete.basic.tagline">Für einen klaren, professionellen Start.</p>
           </div>
           <ul class="paket-card__list">
-            <li>Modernes Webdesign</li>
-            <li>Mobil optimiert</li>
-            <li>Kontaktbereich oder -formular</li>
-            <li>Domain- &amp; E-Mail-Setup</li>
-            <li>Basic SEO-Setup</li>
-            <li>Technischer Launch-Support</li>
-            <li>Bis zu 5 Änderungsrunden</li>
+            <li data-i18n-html="pakete.basic.li1">Modernes Webdesign</li>
+            <li data-i18n="pakete.basic.li2">Mobil optimiert</li>
+            <li data-i18n-html="pakete.basic.li3">Kontaktbereich oder -formular</li>
+            <li data-i18n-html="pakete.basic.li4">Domain- &amp; E-Mail-Setup</li>
+            <li data-i18n="pakete.basic.li5">Basic SEO-Setup</li>
+            <li data-i18n="pakete.basic.li6">Technischer Launch-Support</li>
+            <li data-i18n="pakete.basic.li7">Bis zu 5 Änderungsrunden</li>
           </ul>
-          <a href="https://buy.stripe.com/cNiaEXeBT8cJgN42bedIA00" target="_blank" rel="noopener" class="btn btn--outline btn--full">Jetzt kaufen — CHF 499</a>
+          <a href="https://buy.stripe.com/cNiaEXeBT8cJgN42bedIA00" target="_blank" rel="noopener" class="btn btn--outline btn--full" data-i18n="pakete.basic.btn">Jetzt kaufen — CHF 499</a>
         </div>
 
         <div class="paket-card paket-card--main reveal">
-          <div class="paket-card__badge">Empfohlen</div>
+          <div class="paket-card__badge" data-i18n="pakete.komplex.badge">Empfohlen</div>
           <div class="paket-card__top">
-            <div class="paket-card__name">Komplexe Website</div>
+            <div class="paket-card__name" data-i18n="pakete.komplex.name">Komplexe Website</div>
             <div class="paket-card__price"><span>CHF</span> 799</div>
-            <p class="paket-card__tagline">Für einen umfangreicheren Webauftritt mit mehr Struktur, Inhalt und Gestaltung.</p>
+            <p class="paket-card__tagline" data-i18n="pakete.komplex.tagline">Für einen umfangreicheren Webauftritt mit mehr Struktur, Inhalt und Gestaltung.</p>
           </div>
           <ul class="paket-card__list">
-            <li>Alles aus Basic</li>
-            <li>Mehr Seiten oder Abschnitte</li>
-            <li>Stärkere Inhaltsstruktur</li>
-            <li>Angebots- &amp; Servicepräsentation</li>
-            <li>FAQ / Galerie / Portfolio möglich</li>
-            <li>Stärkere visuelle Gestaltung</li>
-            <li>Bis zu 5 Änderungsrunden</li>
+            <li data-i18n="pakete.komplex.li1">Alles aus Basic</li>
+            <li data-i18n="pakete.komplex.li2">Mehr Seiten oder Abschnitte</li>
+            <li data-i18n="pakete.komplex.li3">Stärkere Inhaltsstruktur</li>
+            <li data-i18n-html="pakete.komplex.li4">Angebots- &amp; Servicepräsentation</li>
+            <li data-i18n="pakete.komplex.li5">FAQ / Galerie / Portfolio möglich</li>
+            <li data-i18n="pakete.komplex.li6">Stärkere visuelle Gestaltung</li>
+            <li data-i18n="pakete.komplex.li7">Bis zu 5 Änderungsrunden</li>
           </ul>
-          <a href="https://buy.stripe.com/9B6dR9gK1akR7cu5nqdIA01" target="_blank" rel="noopener" class="btn btn--primary btn--full">Jetzt kaufen — CHF 799</a>
+          <a href="https://buy.stripe.com/9B6dR9gK1akR7cu5nqdIA01" target="_blank" rel="noopener" class="btn btn--primary btn--full" data-i18n="pakete.komplex.btn">Jetzt kaufen — CHF 799</a>
         </div>
 
         <div class="paket-card reveal">
           <div class="paket-card__top">
-            <div class="paket-card__name">E-Shop / Individuell</div>
-            <div class="paket-card__price paket-card__price--req">Preis auf Anfrage</div>
-            <p class="paket-card__tagline">Für Online-Shops, Buchungssysteme, Zahlungsanbindungen, Mitgliedschaften, mehrsprachige Webseiten oder individuelle Funktionen.</p>
+            <div class="paket-card__name" data-i18n="pakete.eshop.name">E-Shop / Individuell</div>
+            <div class="paket-card__price paket-card__price--req" data-i18n="pakete.eshop.price">Preis auf Anfrage</div>
+            <p class="paket-card__tagline" data-i18n="pakete.eshop.tagline">Für Online-Shops, Buchungssysteme, Zahlungsanbindungen, Mitgliedschaften, mehrsprachige Webseiten oder individuelle Funktionen.</p>
           </div>
           <ul class="paket-card__list">
-            <li>Online-Shop &amp; E-Commerce</li>
-            <li>Buchungs- &amp; Bezahlsysteme</li>
-            <li>Mitgliederbereiche</li>
-            <li>Mehrsprachige Webseiten</li>
-            <li>Individuelle Funktionen</li>
-            <li>Massgeschneiderte Lösung</li>
+            <li data-i18n-html="pakete.eshop.li1">Online-Shop &amp; E-Commerce</li>
+            <li data-i18n-html="pakete.eshop.li2">Buchungs- &amp; Bezahlsysteme</li>
+            <li data-i18n="pakete.eshop.li3">Mitgliederbereiche</li>
+            <li data-i18n="pakete.eshop.li4">Mehrsprachige Webseiten</li>
+            <li data-i18n="pakete.eshop.li5">Individuelle Funktionen</li>
+            <li data-i18n="pakete.eshop.li6">Massgeschneiderte Lösung</li>
           </ul>
-          <a href="#kontakt" class="btn btn--outline btn--full">Offerte anfragen</a>
+          <a href="#kontakt" class="btn btn--outline btn--full" data-i18n="pakete.eshop.btn">Offerte anfragen</a>
         </div>
 
       </div>
       <p class="pakete__offer-note reveal">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-        Aktuelles Spezialangebot für eine begrenzte Anzahl an Projekten. Danach können sich die Preise ändern.
+        <span data-i18n="pakete.offer">Aktuelles Spezialangebot für eine begrenzte Anzahl an Projekten. Danach können sich die Preise ändern.</span>
       </p>
     </div>
   </section>
@@ -226,59 +274,38 @@
   <section class="included section" id="inklusive">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-eyebrow">Inklusive</div>
-        <h2 class="section-title">Alles Wichtige<br /><em>inklusive</em></h2>
-        <p class="section-sub">Kein versteckter Aufpreis. Was Sie sehen, ist was Sie bekommen.</p>
+        <div class="section-eyebrow" data-i18n="included.eyebrow">Inklusive</div>
+        <h2 class="section-title" data-i18n-html="included.title">Alles Wichtige<br /><em>inklusive</em></h2>
+        <p class="section-sub" data-i18n="included.sub">Kein versteckter Aufpreis. Was Sie sehen, ist was Sie bekommen.</p>
       </div>
       <div class="included__grid reveal">
         <div class="included__item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div>
-            <strong>Domain- &amp; E-Mail-Setup</strong>
-            <span>Technische Einrichtung komplett übernommen</span>
-          </div>
+          <div><strong data-i18n-html="included.01.title">Domain- &amp; E-Mail-Setup</strong><span data-i18n="included.01.text">Technische Einrichtung komplett übernommen</span></div>
         </div>
         <div class="included__item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div>
-            <strong>Mobil optimierte Webseite</strong>
-            <span>Funktioniert auf allen Geräten</span>
-          </div>
+          <div><strong data-i18n="included.02.title">Mobil optimierte Webseite</strong><span data-i18n="included.02.text">Funktioniert auf allen Geräten</span></div>
         </div>
         <div class="included__item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div>
-            <strong>Kontaktformular oder -bereich</strong>
-            <span>Damit Anfragen direkt bei Ihnen ankommen</span>
-          </div>
+          <div><strong data-i18n="included.03.title">Kontaktformular oder -bereich</strong><span data-i18n="included.03.text">Damit Anfragen direkt bei Ihnen ankommen</span></div>
         </div>
         <div class="included__item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div>
-            <strong>Basic SEO-Grundlagen</strong>
-            <span>Damit Sie in Suchmaschinen gefunden werden</span>
-          </div>
+          <div><strong data-i18n="included.04.title">Basic SEO-Grundlagen</strong><span data-i18n="included.04.text">Damit Sie in Suchmaschinen gefunden werden</span></div>
         </div>
         <div class="included__item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div>
-            <strong>Technischer Launch-Support</strong>
-            <span>Ich kümmere mich um den technischen Start</span>
-          </div>
+          <div><strong data-i18n="included.05.title">Technischer Launch-Support</strong><span data-i18n="included.05.text">Ich kümmere mich um den technischen Start</span></div>
         </div>
         <div class="included__item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div>
-            <strong>Bis zu 5 Änderungsrunden</strong>
-            <span>Feedback nehme ich ernst — und setze es um</span>
-          </div>
+          <div><strong data-i18n="included.06.title">Bis zu 5 Änderungsrunden</strong><span data-i18n="included.06.text">Feedback nehme ich ernst — und setze es um</span></div>
         </div>
         <div class="included__item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div>
-            <strong>Persönliche Begleitung</strong>
-            <span>Sie arbeiten direkt mit mir — kein Agentur-Ping-Pong</span>
-          </div>
+          <div><strong data-i18n="included.07.title">Persönliche Begleitung</strong><span data-i18n="included.07.text">Sie arbeiten direkt mit mir — kein Agentur-Ping-Pong</span></div>
         </div>
       </div>
     </div>
@@ -289,23 +316,23 @@
     <div class="container">
       <div class="erfahrung__inner">
         <div class="erfahrung__text reveal">
-          <div class="section-eyebrow">Warum mit mir?</div>
-          <h2 class="section-title">Erfahrener Entwickler<br /><em>statt Baukasten-Zufall</em></h2>
-          <p class="erfahrung__lead">Heute kann fast jeder mit KI oder Baukasten-Tools schnell etwas erstellen. Aber eine gute Webseite braucht mehr als ein schönes Design.</p>
-          <p class="erfahrung__body">Sie braucht klare Struktur, saubere Technik, schnelle Ladezeiten, mobile Optimierung, verständliche Inhalte und eine zuverlässige Umsetzung.</p>
-          <p class="erfahrung__body">Ich bin erfahrener Entwickler und nutze moderne Werkzeuge sinnvoll — aber ich verstehe auch, was im Hintergrund passiert. Dadurch erhalten Sie eine Webseite, die nicht nur gut aussieht, sondern auch funktioniert.</p>
+          <div class="section-eyebrow" data-i18n="erfahrung.eyebrow">Warum mit mir?</div>
+          <h2 class="section-title" data-i18n-html="erfahrung.title">Erfahrener Entwickler<br /><em>statt Baukasten-Zufall</em></h2>
+          <p class="erfahrung__lead" data-i18n="erfahrung.lead">Heute kann fast jeder mit KI oder Baukasten-Tools schnell etwas erstellen. Aber eine gute Webseite braucht mehr als ein schönes Design.</p>
+          <p class="erfahrung__body" data-i18n="erfahrung.body1">Sie braucht klare Struktur, saubere Technik, schnelle Ladezeiten, mobile Optimierung, verständliche Inhalte und eine zuverlässige Umsetzung.</p>
+          <p class="erfahrung__body" data-i18n="erfahrung.body2">Ich bin erfahrener Entwickler und nutze moderne Werkzeuge sinnvoll — aber ich verstehe auch, was im Hintergrund passiert. Dadurch erhalten Sie eine Webseite, die nicht nur gut aussieht, sondern auch funktioniert.</p>
           <ul class="erfahrung__list">
-            <li>Direkter persönlicher Kontakt — immer mit mir</li>
-            <li>Klare, verständliche Kommunikation</li>
-            <li>Technische Umsetzung vollständig übernommen</li>
-            <li>Hilfe bei Struktur, Angebot und Zielgruppe</li>
-            <li>Modernes, sauberes Design</li>
-            <li>Faire und transparente Preise</li>
-            <li>Persönlich, schnell und zuverlässig</li>
+            <li data-i18n="erfahrung.li1">Direkter persönlicher Kontakt — immer mit mir</li>
+            <li data-i18n="erfahrung.li2">Klare, verständliche Kommunikation</li>
+            <li data-i18n="erfahrung.li3">Technische Umsetzung vollständig übernommen</li>
+            <li data-i18n="erfahrung.li4">Hilfe bei Struktur, Angebot und Zielgruppe</li>
+            <li data-i18n="erfahrung.li5">Modernes, sauberes Design</li>
+            <li data-i18n="erfahrung.li6">Faire und transparente Preise</li>
+            <li data-i18n="erfahrung.li7">Persönlich, schnell und zuverlässig</li>
           </ul>
           <a href="https://www.linkedin.com/in/igorbobusky/" target="_blank" rel="noopener" class="erfahrung__linkedin">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn Profil ansehen
+            <span data-i18n="erfahrung.linkedin">LinkedIn Profil ansehen</span>
           </a>
         </div>
         <div class="erfahrung__photo reveal">
@@ -315,7 +342,7 @@
           </div>
           <div class="erfahrung__badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <span>12+ Jahre Entwicklungs&shy;erfahrung</span>
+            <span data-i18n-html="erfahrung.badge">12+ Jahre Entwicklungs&shy;erfahrung</span>
           </div>
         </div>
       </div>
@@ -326,16 +353,16 @@
   <section class="work section" id="work">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-eyebrow">Referenzen</div>
-        <h2 class="section-title">Beispiele<br /><em>aus der Praxis</em></h2>
-        <p class="section-sub">Einige Beispiele für Webseiten, die Ideen, Angebote und Marken professionell sichtbar machen.</p>
+        <div class="section-eyebrow" data-i18n="work.eyebrow">Referenzen</div>
+        <h2 class="section-title" data-i18n-html="work.title">Beispiele<br /><em>aus der Praxis</em></h2>
+        <p class="section-sub" data-i18n="work.sub">Einige Beispiele für Webseiten, die Ideen, Angebote und Marken professionell sichtbar machen.</p>
       </div>
       <div class="work__grid">
         <article class="work-card reveal">
           <div class="work-card__preview">
             <div class="work-card__overlay">
               <a href="https://atelier-glanz.ch" target="_blank" rel="noopener" class="work-card__visit">
-                Webseite besuchen
+                <span data-i18n="work.visit">Webseite besuchen</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </a>
             </div>
@@ -361,7 +388,7 @@
           <div class="work-card__info">
             <div class="work-card__tags"><span>Eventorganisation</span><span>Zentralschweiz</span></div>
             <h3>Atelier Glanz</h3>
-            <p>Eventorganisation mit Herz und Präzision — Veronika Bobuska kreiert unvergessliche Familien- und Kinderanlässe in der Zentralschweiz.</p>
+            <p data-i18n="work.atelier.desc">Eventorganisation mit Herz und Präzision — Veronika Bobuska kreiert unvergessliche Familien- und Kinderanlässe in der Zentralschweiz.</p>
             <a href="https://atelier-glanz.ch" target="_blank" rel="noopener" class="work-card__link">
               atelier-glanz.ch <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
@@ -371,7 +398,7 @@
           <div class="work-card__preview">
             <div class="work-card__overlay">
               <a href="https://legendarylovebreakthrough.com/" target="_blank" rel="noopener" class="work-card__visit">
-                Webseite besuchen
+                <span data-i18n="work.visit">Webseite besuchen</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </a>
             </div>
@@ -397,7 +424,7 @@
           <div class="work-card__info">
             <div class="work-card__tags"><span>Coaching</span><span>Conversion-fokussiert</span></div>
             <h3>Legendary Love Breakthrough</h3>
-            <p>Coaching-Webseite, die Menschen direkt anspricht und zur Buchung eines Erstgesprächs führt — klare Botschaft, klare Handlungsaufforderung.</p>
+            <p data-i18n="work.legendary.desc">Coaching-Webseite, die Menschen direkt anspricht und zur Buchung eines Erstgesprächs führt — klare Botschaft, klare Handlungsaufforderung.</p>
             <a href="https://legendarylovebreakthrough.com/" target="_blank" rel="noopener" class="work-card__link">
               legendarylovebreakthrough.com <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
@@ -411,48 +438,48 @@
   <section class="process section section--light" id="prozess">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-eyebrow">Ablauf</div>
-        <h2 class="section-title">So arbeiten<br /><em>wir zusammen</em></h2>
-        <p class="section-sub">Klar, unkompliziert und persönlich — ohne Agentur-Aufwand.</p>
+        <div class="section-eyebrow" data-i18n="process.eyebrow">Ablauf</div>
+        <h2 class="section-title" data-i18n-html="process.title">So arbeiten<br /><em>wir zusammen</em></h2>
+        <p class="section-sub" data-i18n="process.sub">Klar, unkompliziert und persönlich — ohne Agentur-Aufwand.</p>
       </div>
       <div class="process__steps">
         <div class="process__step reveal">
           <div class="process__num">01</div>
           <div class="process__content">
-            <h3>Unverbindlich anfragen</h3>
-            <p>Sie schreiben mir kurz, was Sie anbieten und was Sie erreichen möchten. Formlos und ohne Verpflichtung.</p>
+            <h3 data-i18n="process.01.title">Unverbindlich anfragen</h3>
+            <p data-i18n="process.01.text">Sie schreiben mir kurz, was Sie anbieten und was Sie erreichen möchten. Formlos und ohne Verpflichtung.</p>
           </div>
         </div>
         <div class="process__connector"></div>
         <div class="process__step reveal">
           <div class="process__num">02</div>
           <div class="process__content">
-            <h3>Vorschlag erhalten</h3>
-            <p>Ich helfe Ihnen, Struktur, Zielgruppe und mögliche Inhalte zu klären und erstelle einen ersten Website-Vorschlag.</p>
+            <h3 data-i18n="process.02.title">Vorschlag erhalten</h3>
+            <p data-i18n="process.02.text">Ich helfe Ihnen, Struktur, Zielgruppe und mögliche Inhalte zu klären und erstelle einen ersten Website-Vorschlag.</p>
           </div>
         </div>
         <div class="process__connector"></div>
         <div class="process__step reveal">
           <div class="process__num">03</div>
           <div class="process__content">
-            <h3>Webseite erstellen</h3>
-            <p>Wenn es für beide Seiten passt, setze ich Ihre Webseite professionell um. Sie erhalten eine Vorschau, bevor alles live geht.</p>
+            <h3 data-i18n="process.03.title">Webseite erstellen</h3>
+            <p data-i18n="process.03.text">Wenn es für beide Seiten passt, setze ich Ihre Webseite professionell um. Sie erhalten eine Vorschau, bevor alles live geht.</p>
           </div>
         </div>
         <div class="process__connector"></div>
         <div class="process__step reveal">
           <div class="process__num">04</div>
           <div class="process__content">
-            <h3>Feedback &amp; Anpassungen</h3>
-            <p>Sie geben Feedback — ich setze Ihre Wünsche um. Bis zu 5 Änderungsrunden sind inklusive.</p>
+            <h3 data-i18n-html="process.04.title">Feedback &amp; Anpassungen</h3>
+            <p data-i18n="process.04.text">Sie geben Feedback — ich setze Ihre Wünsche um. Bis zu 5 Änderungsrunden sind inklusive.</p>
           </div>
         </div>
         <div class="process__connector"></div>
         <div class="process__step reveal">
           <div class="process__num">05</div>
           <div class="process__content">
-            <h3>Online gehen</h3>
-            <p>Ich unterstütze Sie bei Domain, E-Mail-Einrichtung, technischem Setup und dem Launch Ihrer Webseite.</p>
+            <h3 data-i18n="process.05.title">Online gehen</h3>
+            <p data-i18n="process.05.text">Ich unterstütze Sie bei Domain, E-Mail-Einrichtung, technischem Setup und dem Launch Ihrer Webseite.</p>
           </div>
         </div>
       </div>
@@ -463,39 +490,39 @@
   <section class="care section" id="betreuung">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-eyebrow">Nach dem Launch</div>
-        <h2 class="section-title">Monatliche Betreuung &amp;<br /><em>weitere Anpassungen</em></h2>
+        <div class="section-eyebrow" data-i18n="care.eyebrow">Nach dem Launch</div>
+        <h2 class="section-title" data-i18n-html="care.title">Monatliche Betreuung &amp;<br /><em>weitere Anpassungen</em></h2>
       </div>
       <div class="care__inner">
         <div class="care__card reveal">
           <div class="care__header">
-            <h3>Monatliche Betreuung</h3>
-            <div class="care__price">CHF <strong>95</strong><span> / Monat</span></div>
+            <h3 data-i18n="care.monthly.title">Monatliche Betreuung</h3>
+            <div class="care__price" data-i18n-html="care.monthly.price">CHF <strong>95</strong><span> / Monat</span></div>
           </div>
-          <p>Nach dem Launch kann ich Ihre Webseite technisch betreuen, damit sie zuverlässig online bleibt.</p>
+          <p data-i18n="care.monthly.desc">Nach dem Launch kann ich Ihre Webseite technisch betreuen, damit sie zuverlässig online bleibt.</p>
           <ul class="care__list">
-            <li>Technische Betreuung</li>
-            <li>Basic-Checks</li>
-            <li>Domain- &amp; E-Mail-Support</li>
-            <li>Hosting- &amp; Setup-Koordination</li>
-            <li>Kleine Support-Anfragen</li>
+            <li data-i18n="care.monthly.li1">Technische Betreuung</li>
+            <li data-i18n="care.monthly.li2">Basic-Checks</li>
+            <li data-i18n-html="care.monthly.li3">Domain- &amp; E-Mail-Support</li>
+            <li data-i18n-html="care.monthly.li4">Hosting- &amp; Setup-Koordination</li>
+            <li data-i18n="care.monthly.li5">Kleine Support-Anfragen</li>
           </ul>
-          <p class="care__note">Grössere Inhaltsänderungen, neue Seiten, neue Funktionen, Redesigns, Marketingkampagnen oder erweitertes SEO sind nicht enthalten und werden separat verrechnet.</p>
+          <p class="care__note" data-i18n="care.monthly.note">Grössere Inhaltsänderungen, neue Seiten, neue Funktionen, Redesigns, Marketingkampagnen oder erweitertes SEO sind nicht enthalten und werden separat verrechnet.</p>
         </div>
         <div class="care__extra reveal">
-          <h3>Weitere Anpassungen nach dem Launch</h3>
+          <h3 data-i18n="care.extra.title">Weitere Anpassungen nach dem Launch</h3>
           <div class="care__rates">
             <div class="care__rate">
-              <span>Basic Website</span>
+              <span data-i18n="care.extra.basic">Basic Website</span>
               <strong>CHF 100 <small>/ Stunde</small></strong>
             </div>
             <div class="care__rate">
-              <span>Komplexe Website</span>
+              <span data-i18n="care.extra.komplex">Komplexe Website</span>
               <strong>CHF 150 <small>/ Stunde</small></strong>
             </div>
           </div>
-          <p class="care__rate-note">Für Inhaltsänderungen, neue Abschnitte, Design-Updates oder zusätzliche Funktionen nach dem Launch.</p>
-          <a href="#kontakt" class="btn btn--outline">Anfrage stellen</a>
+          <p class="care__rate-note" data-i18n="care.extra.note">Für Inhaltsänderungen, neue Abschnitte, Design-Updates oder zusätzliche Funktionen nach dem Launch.</p>
+          <a href="#kontakt" class="btn btn--outline" data-i18n="care.extra.btn">Anfrage stellen</a>
         </div>
       </div>
     </div>
@@ -504,13 +531,13 @@
   <!-- CONTACT CTA -->
   <section class="cta-section">
     <div class="container cta-section__inner reveal">
-      <h2>Bereit, Ihre Idee<br /><em>online sichtbar zu machen?</em></h2>
-      <p>Schreiben Sie mir unverbindlich. Gemeinsam schauen wir, was Ihre Webseite braucht und welche Lösung am besten passt.</p>
+      <h2 data-i18n-html="cta.title">Bereit, Ihre Idee<br /><em>online sichtbar zu machen?</em></h2>
+      <p data-i18n="cta.text">Schreiben Sie mir unverbindlich. Gemeinsam schauen wir, was Ihre Webseite braucht und welche Lösung am besten passt.</p>
       <div class="cta-section__actions">
-        <a href="#kontakt" class="btn btn--white btn--lg">Kostenlosen Website-Vorschlag erhalten</a>
-        <a href="#kontakt" class="btn btn--outline-white">Unverbindlich anfragen</a>
+        <a href="#kontakt" class="btn btn--white btn--lg" data-i18n="cta.btn1">Kostenlosen Website-Vorschlag erhalten</a>
+        <a href="#kontakt" class="btn btn--outline-white" data-i18n="cta.btn2">Unverbindlich anfragen</a>
       </div>
-      <p class="cta-section__note">Ein kurzes Gespräch ist möglich, wenn es für Ihr Projekt sinnvoll ist.</p>
+      <p class="cta-section__note" data-i18n="cta.note">Ein kurzes Gespräch ist möglich, wenn es für Ihr Projekt sinnvoll ist.</p>
     </div>
   </section>
 
@@ -518,16 +545,16 @@
   <section class="contact section" id="kontakt">
     <div class="container contact__inner">
       <div class="contact__info reveal">
-        <div class="section-eyebrow">Kontakt</div>
-        <h2 class="section-title">Starten Sie<br /><em>noch heute</em></h2>
-        <p>Füllen Sie das Formular aus — ich melde mich innerhalb von 24 Stunden. Unverbindlich und ohne Druck.</p>
+        <div class="section-eyebrow" data-i18n="contact.eyebrow">Kontakt</div>
+        <h2 class="section-title" data-i18n-html="contact.title">Starten Sie<br /><em>noch heute</em></h2>
+        <p data-i18n="contact.desc">Füllen Sie das Formular aus — ich melde mich innerhalb von 24 Stunden. Unverbindlich und ohne Druck.</p>
         <div class="contact__details">
           <a href="mailto:igor.bobusky@gmail.com" class="contact__detail">
             <div class="contact__detail-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </div>
             <div>
-              <span class="contact__detail-label">E-Mail</span>
+              <span class="contact__detail-label" data-i18n="contact.email.label">E-Mail</span>
               <span class="contact__detail-value">igor.bobusky@gmail.com</span>
             </div>
           </a>
@@ -536,7 +563,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.27z"></path></svg>
             </div>
             <div>
-              <span class="contact__detail-label">Telefon</span>
+              <span class="contact__detail-label" data-i18n="contact.phone.label">Telefon</span>
               <span class="contact__detail-value">076 788 78 23</span>
             </div>
           </a>
@@ -545,14 +572,14 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </div>
             <div>
-              <span class="contact__detail-label">LinkedIn</span>
+              <span class="contact__detail-label" data-i18n="contact.linkedin.label">LinkedIn</span>
               <span class="contact__detail-value">linkedin.com/in/igorbobusky</span>
             </div>
           </a>
         </div>
         <div class="contact__promise">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Antwort innerhalb von 24 Stunden — immer.
+          <span data-i18n="contact.promise">Antwort innerhalb von 24 Stunden — immer.</span>
         </div>
       </div>
       <form class="contact__form reveal" id="contactForm" novalidate>
@@ -561,46 +588,46 @@
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" />
         <div class="form-row">
           <div class="form-group">
-            <label for="name">Ihr Name *</label>
-            <input type="text" id="name" name="name" placeholder="Max Muster" required />
-            <span class="form-error" id="nameError">Bitte geben Sie Ihren Namen ein.</span>
+            <label for="name" data-i18n="form.name.label">Ihr Name *</label>
+            <input type="text" id="name" name="name" placeholder="Max Muster" data-i18n-placeholder="form.name.placeholder" required />
+            <span class="form-error" id="nameError" data-i18n="form.name.error">Bitte geben Sie Ihren Namen ein.</span>
           </div>
           <div class="form-group">
-            <label for="email">E-Mail-Adresse *</label>
-            <input type="email" id="email" name="email" placeholder="max@beispiel.ch" required />
-            <span class="form-error" id="emailError">Bitte geben Sie eine gültige E-Mail ein.</span>
+            <label for="email" data-i18n="form.email.label">E-Mail-Adresse *</label>
+            <input type="email" id="email" name="email" placeholder="max@beispiel.ch" data-i18n-placeholder="form.email.placeholder" required />
+            <span class="form-error" id="emailError" data-i18n="form.email.error">Bitte geben Sie eine gültige E-Mail ein.</span>
           </div>
         </div>
         <div class="form-group">
-          <label for="company">Unternehmen / bestehende Webseite (optional)</label>
-          <input type="text" id="company" name="company" placeholder="Ihr Unternehmensname oder aktuelle Webseite" />
+          <label for="company" data-i18n="form.company.label">Unternehmen / bestehende Webseite (optional)</label>
+          <input type="text" id="company" name="company" placeholder="Ihr Unternehmensname oder aktuelle Webseite" data-i18n-placeholder="form.company.placeholder" />
         </div>
         <div class="form-group">
-          <label for="service">Was interessiert Sie? *</label>
+          <label for="service" data-i18n="form.service.label">Was interessiert Sie? *</label>
           <select id="service" name="service" required>
-            <option value="" disabled selected>Bitte auswählen…</option>
-            <option value="Basic Website (CHF 499)">Basic Website (CHF 499)</option>
-            <option value="Komplexe Website (CHF 799)">Komplexe Website (CHF 799)</option>
-            <option value="E-Shop / Individuelles Projekt">E-Shop / Individuelles Projekt</option>
-            <option value="Kostenloser Website-Vorschlag">Kostenloser Website-Vorschlag</option>
-            <option value="Monatliche Betreuung">Monatliche Betreuung</option>
-            <option value="Noch nicht sicher — einfach Kontakt aufnehmen">Noch nicht sicher — einfach Kontakt aufnehmen</option>
+            <option value="" disabled selected data-i18n="form.service.default">Bitte auswählen…</option>
+            <option value="Basic Website (CHF 499)" data-i18n="form.service.opt1">Basic Website (CHF 499)</option>
+            <option value="Komplexe Website (CHF 799)" data-i18n="form.service.opt2">Komplexe Website (CHF 799)</option>
+            <option value="E-Shop / Individuelles Projekt" data-i18n="form.service.opt3">E-Shop / Individuelles Projekt</option>
+            <option value="Kostenloser Website-Vorschlag" data-i18n="form.service.opt4">Kostenloser Website-Vorschlag</option>
+            <option value="Monatliche Betreuung" data-i18n="form.service.opt5">Monatliche Betreuung</option>
+            <option value="Noch nicht sicher — einfach Kontakt aufnehmen" data-i18n="form.service.opt6">Noch nicht sicher — einfach Kontakt aufnehmen</option>
           </select>
-          <span class="form-error" id="serviceError">Bitte wählen Sie eine Option.</span>
+          <span class="form-error" id="serviceError" data-i18n="form.service.error">Bitte wählen Sie eine Option.</span>
         </div>
         <div class="form-group">
-          <label for="message">Was bieten Sie an und was möchten Sie erreichen? *</label>
-          <textarea id="message" name="message" rows="5" placeholder="Beschreiben Sie kurz Ihr Angebot, Ihre Zielgruppe und was Sie sich von Ihrer Webseite wünschen…" required></textarea>
-          <span class="form-error" id="messageError">Bitte beschreiben Sie kurz Ihr Anliegen.</span>
+          <label for="message" data-i18n="form.message.label">Was bieten Sie an und was möchten Sie erreichen? *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Beschreiben Sie kurz Ihr Angebot, Ihre Zielgruppe und was Sie sich von Ihrer Webseite wünschen…" data-i18n-placeholder="form.message.placeholder" required></textarea>
+          <span class="form-error" id="messageError" data-i18n="form.message.error">Bitte beschreiben Sie kurz Ihr Anliegen.</span>
         </div>
         <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
-          <span class="btn-text">Nachricht senden</span>
-          <span class="btn-loading" hidden>Senden…</span>
+          <span class="btn-text" data-i18n="form.submit">Nachricht senden</span>
+          <span class="btn-loading" hidden data-i18n="form.sending">Senden…</span>
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         </button>
         <div class="form-success" id="formSuccess" hidden>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          <strong>Nachricht gesendet!</strong> Ich melde mich innerhalb von 24 Stunden.
+          <span data-i18n-html="form.success"><strong>Nachricht gesendet!</strong> Ich melde mich innerhalb von 24 Stunden.</span>
         </div>
       </form>
     </div>
@@ -611,33 +638,33 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#" class="nav__logo">IB Webdesign<span class="dot">.</span></a>
-        <p>Professionelle Webseiten für Selbständige,<br />Vereine und KMU in der Schweiz.</p>
+        <p data-i18n-html="footer.brand">Professionelle Webseiten für Selbständige,<br />Vereine und KMU in der Schweiz.</p>
         <p class="footer__domain">ib-webdesign.ch</p>
       </div>
       <div class="footer__links">
         <div class="footer__col">
-          <h4>Navigation</h4>
-          <a href="#warum">Warum?</a>
-          <a href="#pakete">Pakete</a>
-          <a href="#erfahrung">Erfahrung</a>
-          <a href="#work">Referenzen</a>
-          <a href="#prozess">Ablauf</a>
-          <a href="#kontakt">Kontakt</a>
+          <h4 data-i18n="footer.nav.heading">Navigation</h4>
+          <a href="#warum" data-i18n="footer.nav.why">Warum?</a>
+          <a href="#pakete" data-i18n="footer.nav.packages">Pakete</a>
+          <a href="#erfahrung" data-i18n="footer.nav.experience">Erfahrung</a>
+          <a href="#work" data-i18n="footer.nav.references">Referenzen</a>
+          <a href="#prozess" data-i18n="footer.nav.process">Ablauf</a>
+          <a href="#kontakt" data-i18n="footer.nav.contact">Kontakt</a>
         </div>
         <div class="footer__col">
-          <h4>Pakete</h4>
-          <a href="#pakete">Basic Website — CHF 499</a>
-          <a href="#pakete">Komplexe Website — CHF 799</a>
-          <a href="#pakete">E-Shop / Individuell</a>
-          <a href="#betreuung">Monatliche Betreuung</a>
+          <h4 data-i18n="footer.packages.heading">Pakete</h4>
+          <a href="#pakete" data-i18n="footer.pkg.basic">Basic Website — CHF 499</a>
+          <a href="#pakete" data-i18n="footer.pkg.komplex">Komplexe Website — CHF 799</a>
+          <a href="#pakete" data-i18n="footer.pkg.eshop">E-Shop / Individuell</a>
+          <a href="#betreuung" data-i18n="footer.pkg.care">Monatliche Betreuung</a>
         </div>
         <div class="footer__col">
-          <h4>Kontakt</h4>
+          <h4 data-i18n="footer.contact.heading">Kontakt</h4>
           <a href="mailto:igor.bobusky@gmail.com">igor.bobusky@gmail.com</a>
           <a href="tel:+41767887823">076 788 78 23</a>
           <a href="https://www.linkedin.com/in/igorbobusky/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
+          <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+          <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
         </div>
       </div>
     </div>
@@ -647,10 +674,10 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 IB Webdesign Schweiz — Omnia Business Bobusky. Alle Rechte vorbehalten.</p>
+      <p data-i18n="footer.bottom">© 2026 IB Webdesign Schweiz — Omnia Business Bobusky. Alle Rechte vorbehalten.</p>
       <div class="footer__bottom-links">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
         <a href="https://buy.stripe.com/aFa7sL65neB71Sa7vydIA02" target="_blank" rel="noopener" class="footer__test-link">Test</a>
       </div>
     </div>
@@ -659,9 +686,10 @@
   <!-- FLOATING CTA -->
   <a href="#kontakt" class="float-cta" id="floatCta">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.27z"></path></svg>
-    <span>Anfragen</span>
+    <span data-i18n="float.cta">Anfragen</span>
   </a>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

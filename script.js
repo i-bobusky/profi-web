@@ -42,6 +42,52 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+// Language switcher
+let currentLang = localStorage.getItem('ib-lang') || 'de';
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('ib-lang', lang);
+  document.documentElement.lang = lang;
+  const t = translations[lang];
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.dataset.i18n];
+    if (v !== undefined) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const v = t[el.dataset.i18nHtml];
+    if (v !== undefined) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const v = t[el.dataset.i18nPlaceholder];
+    if (v !== undefined) el.placeholder = v;
+  });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const v = t[el.dataset.i18nAria];
+    if (v !== undefined) el.setAttribute('aria-label', v);
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  document.title = lang === 'en'
+    ? 'IB Webdesign Switzerland — Professional Websites from CHF 499'
+    : 'IB Webdesign Schweiz — Professionelle Webseiten ab CHF 499';
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.content = lang === 'en'
+    ? 'Professional websites for freelancers, associations and SMEs in Switzerland. Clear, fast and affordable. Get a free website proposal.'
+    : 'Professionelle Webseiten für Selbständige, Vereine und KMU in der Schweiz. Klar, schnell und bezahlbar. Kostenlosen Website-Vorschlag erhalten.';
+}
+
+document.getElementById('langToggle').querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+applyLang(currentLang);
+
 // Contact form — Web3Forms AJAX
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
